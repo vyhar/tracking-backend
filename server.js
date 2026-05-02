@@ -9,7 +9,9 @@ const PORT = process.env.PORT || 3000;
 
 // ✅ Allow your GitHub Pages domain (replace with yours later)
 app.use(cors({
-  origin: "https://vyhar.github.io/", // change to your GitHub Pages URL later
+  origin: "https://vyhar.github.io",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
 }));
 
 app.use(express.json());
